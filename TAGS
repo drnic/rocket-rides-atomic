@@ -1,0 +1,112 @@
+
+reaper.rb,241
+class ReaperReaper5,0
+  def runrun6,0
+  def run_oncerun_once18,0
+  BATCH_SIZE = 1000BATCH_SIZE29,0
+  BATCH_SIZE = 1000Reaper::BATCH_SIZE29,0
+  SLEEP_DURATION = 5SLEEP_DURATION34,0
+  SLEEP_DURATION = 5Reaper::SLEEP_DURATION34,0
+
+simulator.rb,267
+class SimulatorSimulator6,0
+  def initialize(port:)initialize7,0
+  def runrun11,0
+  def run_oncerun_once20,0
+  VALID_PARAMS = {VALID_PARAMS46,0
+  VALID_PARAMS = {Simulator::VALID_PARAMS46,0
+  attr_accessor :portport54,0
+  attr_accessor :portport=54,0
+
+spec/spec_helper.rb,230
+VALID_PARAMS = {VALID_PARAMS14,0
+def clear_databaseclear_database24,0
+def create_key(params = {})create_key33,0
+def key_valkey_val45,0
+def suppress_stdoutsuppress_stdout49,0
+def useruser53,0
+def verbose?verbose?57,0
+
+api.rb,3050
+class API < Sinatra::BaseAPI6,0
+AUDIT_RIDE_CREATED = "ride.created"AUDIT_RIDE_CREATED176,0
+IDEMPOTENCY_KEY_COMPLETER_LAST_RUN_THRESHOLD = 60IDEMPOTENCY_KEY_COMPLETER_LAST_RUN_THRESHOLD182,0
+IDEMPOTENCY_KEY_COMPLETER_TIMEOUT = 300IDEMPOTENCY_KEY_COMPLETER_TIMEOUT186,0
+IDEMPOTENCY_KEY_LOCK_TIMEOUT = 90IDEMPOTENCY_KEY_LOCK_TIMEOUT192,0
+IDEMPOTENCY_KEY_MIN_LENGTH = 20IDEMPOTENCY_KEY_MIN_LENGTH198,0
+IDEMPOTENCY_KEY_REAP_TIMEOUT = 72 * 3600IDEMPOTENCY_KEY_REAP_TIMEOUT210,0
+RECOVERY_POINT_STARTED        = "started"RECOVERY_POINT_STARTED213,0
+RECOVERY_POINT_RIDE_CREATED   = "ride_created"RECOVERY_POINT_RIDE_CREATED214,0
+RECOVERY_POINT_CHARGE_CREATED = "charge_created"RECOVERY_POINT_CHARGE_CREATED215,0
+RECOVERY_POINT_FINISHED       = "finished"RECOVERY_POINT_FINISHED216,0
+class AuditRecord < Sequel::ModelAuditRecord222,0
+class IdempotencyKey < Sequel::ModelIdempotencyKey225,0
+class Ride < Sequel::ModelRide228,0
+class StagedJob < Sequel::ModelStagedJob231,0
+class User < Sequel::ModelUser234,0
+module MessagesMessages241,0
+  def self.okok242,0
+  def self.error_auth_invaliderror_auth_invalid246,0
+  def self.error_auth_requirederror_auth_required250,0
+  def self.error_internalerror_internal254,0
+  def self.error_key_requirederror_key_required259,0
+  def self.error_key_too_shorterror_key_too_short263,0
+  def self.error_params_mismatcherror_params_mismatch268,0
+  def self.error_payment(error:)error_payment274,0
+  def self.error_payment_genericerror_payment_generic278,0
+  def self.error_request_in_progresserror_request_in_progress282,0
+  def self.error_require_bool(key:)error_require_bool286,0
+  def self.error_require_float(key:)error_require_float290,0
+  def self.error_require_lat(key:)error_require_lat294,0
+  def self.error_require_lon(key:)error_require_lon298,0
+  def self.error_require_param(key:)error_require_param302,0
+  def self.error_retryerror_retry306,0
+class NoOpNoOp314,0
+  def call(_key)call315,0
+class RecoveryPointRecoveryPoint322,0
+  attr_accessor :namename323,0
+  attr_accessor :namename=323,0
+  def initialize(name)initialize325,0
+  def call(key)call329,0
+class ResponseResponse338,0
+  attr_accessor :datadata339,0
+  attr_accessor :datadata=339,0
+  attr_accessor :statusstatus340,0
+  attr_accessor :statusstatus=340,0
+  def initialize(status, data)initialize342,0
+  def call(key)call347,0
+def atomic_phase(key, &block)atomic_phase365,0
+def authenticate_user(request)authenticate_user405,0
+def wrap_error(message)wrap_error424,0
+def wrap_ok(message)wrap_ok430,0
+def validate_idempotency_key(request)validate_idempotency_key434,0
+def validate_params(request)validate_params448,0
+def validate_params_bool(request, key)validate_params_bool457,0
+def validate_params_float(request, key)validate_params_float464,0
+def validate_params_lat(request, key)validate_params_lat475,0
+def validate_params_lon(request, key)validate_params_lon481,0
+def validate_params_present(request, key)validate_params_present487,0
+
+up.rb,21
+USERS = [USERS10,0
+
+completer.rb,253
+class CompleterCompleter5,0
+  def runrun6,0
+  def run_oncerun_once21,0
+  BATCH_SIZE = 1000BATCH_SIZE66,0
+  BATCH_SIZE = 1000Completer::BATCH_SIZE66,0
+  SLEEP_DURATION = 5SLEEP_DURATION72,0
+  SLEEP_DURATION = 5Completer::SLEEP_DURATION72,0
+
+config.rb,78
+DB = Sequel.connect(ENV["DATABASE_URL"] || abort("need DATABASE_URL"))DB6,0
+
+enqueuer.rb,249
+class EnqueuerEnqueuer3,0
+  def runrun4,0
+  def run_oncerun_once17,0
+  BATCH_SIZE = 1000BATCH_SIZE39,0
+  BATCH_SIZE = 1000Enqueuer::BATCH_SIZE39,0
+  SLEEP_DURATION = 5SLEEP_DURATION44,0
+  SLEEP_DURATION = 5Enqueuer::SLEEP_DURATION44,0
